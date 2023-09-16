@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
+    // タイマー
+    var timer: Timer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -30,6 +33,11 @@ class ViewController: UIViewController {
         bachButton.isEnabled = true
         playButton.isHidden = false
         stopButton.isHidden = true
+        
+        // タイマーを停止
+        if self.timer != nil {
+            self.timer.invalidate()
+        }
     }
     
     // 進むボタン押下時
@@ -38,6 +46,11 @@ class ViewController: UIViewController {
         bachButton.isEnabled = false
         playButton.isHidden = true
         stopButton.isHidden = false
+        
+        if self.timer == nil {
+            self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(goOn(_:)), userInfo: nil, repeats: true)
+        }
+        
     }
     
     // 戻るボタン押下時
@@ -53,7 +66,7 @@ class ViewController: UIViewController {
         let name = imageName[changeImgNo]
         image.image = UIImage(named: name)
     }
-
+    
     // 進むボタン押下時
     @IBAction func goOn(_ sender: Any) {
         
