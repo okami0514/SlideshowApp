@@ -14,17 +14,32 @@ class ViewController: UIViewController {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var goOnButton: UIButton!
     @IBOutlet weak var bachButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         image.image = UIImage(named: imageName[0])
+        stopButton.isHidden = true
     }
     
+    // 停止ボタン押下時
+    @IBAction func stop(_ sender: Any) {
+        goOnButton.isEnabled = true
+        bachButton.isEnabled = true
+        playButton.isHidden = false
+        stopButton.isHidden = true
+    }
+    
+    // 進むボタン押下時
     @IBAction func play(_ sender: Any) {
         goOnButton.isEnabled = false
         bachButton.isEnabled = false
+        playButton.isHidden = true
+        stopButton.isHidden = false
     }
+    
     // 戻るボタン押下時
     @IBAction func back(_ sender: Any) {
         
