@@ -13,6 +13,9 @@
 		9A18214E2AB51D5900258E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A18214C2AB51D5900258E7C /* Main.storyboard */; };
 		9A1821502AB51D5B00258E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A18214F2AB51D5B00258E7C /* Assets.xcassets */; };
 		9A1821532AB51D5B00258E7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A1821512AB51D5B00258E7C /* LaunchScreen.storyboard */; };
+		9A18215D2AB51E1D00258E7C /* 150x150_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A18215A2AB51E1C00258E7C /* 150x150_3.png */; };
+		9A18215E2AB51E1D00258E7C /* 150x150_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A18215B2AB51E1C00258E7C /* 150x150_1.png */; };
+		9A18215F2AB51E1D00258E7C /* 150x150_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A18215C2AB51E1D00258E7C /* 150x150_2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		9A18214F2AB51D5B00258E7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A1821522AB51D5B00258E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A1821542AB51D5B00258E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A18215A2AB51E1C00258E7C /* 150x150_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 150x150_3.png; sourceTree = "<group>"; };
+		9A18215B2AB51E1C00258E7C /* 150x150_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 150x150_1.png; sourceTree = "<group>"; };
+		9A18215C2AB51E1D00258E7C /* 150x150_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 150x150_2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				9A1821482AB51D5900258E7C /* SceneDelegate.swift */,
 				9A18214A2AB51D5900258E7C /* ViewController.swift */,
 				9A18214C2AB51D5900258E7C /* Main.storyboard */,
+				9A18215B2AB51E1C00258E7C /* 150x150_1.png */,
+				9A18215C2AB51E1D00258E7C /* 150x150_2.png */,
+				9A18215A2AB51E1C00258E7C /* 150x150_3.png */,
 				9A18214F2AB51D5B00258E7C /* Assets.xcassets */,
 				9A1821512AB51D5B00258E7C /* LaunchScreen.storyboard */,
 				9A1821542AB51D5B00258E7C /* Info.plist */,
@@ -126,7 +135,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A1821532AB51D5B00258E7C /* LaunchScreen.storyboard in Resources */,
+				9A18215F2AB51E1D00258E7C /* 150x150_2.png in Resources */,
 				9A1821502AB51D5B00258E7C /* Assets.xcassets in Resources */,
+				9A18215D2AB51E1D00258E7C /* 150x150_3.png in Resources */,
+				9A18215E2AB51E1D00258E7C /* 150x150_1.png in Resources */,
 				9A18214E2AB51D5900258E7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
