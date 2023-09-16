@@ -10,12 +10,21 @@ import UIKit
 class ViewController: UIViewController {
     let imageName = ["150x150_1.png", "150x150_2.png", "150x150_3.png"]
     var changeImgNo = 0
+    var imageFileName = "150x150_1.png"
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var goOnButton: UIButton!
     @IBOutlet weak var bachButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
+    
+    func setImageFileNmae(fileNmae : String) {
+        self.imageFileName = fileNmae
+    }
+    
+    func getImageFileNmae()  -> String {
+        return self.imageFileName
+    }
     
     // タイマー
     var timer: Timer!
@@ -25,10 +34,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         image.image = UIImage(named: imageName[0])
         stopButton.isHidden = true
+        self.setImageFileNmae(fileNmae: imageName[0])
     }
     
-    // 停止ボタン押下時
-    @IBAction func stop(_ sender: Any) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のResultViewControllerを取得する
+        let resultViewController:ResultViewController = segue.destination as! ResultViewController
+        resultViewController.fileName = self.getImageFileNmae()
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
+    
+    func timerStop() {
         goOnButton.isEnabled = true
         bachButton.isEnabled = true
         playButton.isHidden = false
@@ -38,6 +56,18 @@ class ViewController: UIViewController {
         if self.timer != nil {
             self.timer.invalidate()
         }
+    }
+    
+    // 停止ボタン押下時
+    @IBAction func stop(_ sender: Any) {
+        self.timerStop()
+    }
+    
+    // 画像タップ時
+    @IBAction func tapAction(_ sender: Any) {
+        self.timerStop()
+        self.performSegue(withIdentifier: "toSecond", sender: self)        
+        
     }
     
     // 進むボタン押下時
@@ -65,6 +95,7 @@ class ViewController: UIViewController {
         }
         let name = imageName[changeImgNo]
         image.image = UIImage(named: name)
+        self.setImageFileNmae(fileNmae: name)
     }
     
     // 進むボタン押下時
@@ -79,6 +110,7 @@ class ViewController: UIViewController {
         }
         let name = imageName[changeImgNo]
         image.image = UIImage(named: name)
+        self.setImageFileNmae(fileNmae: name)
     }
 }
 
