@@ -55,6 +55,7 @@ class ViewController: UIViewController {
         // タイマーを停止
         if self.timer != nil {
             self.timer.invalidate()
+            self.timer = nil
         }
     }
     
@@ -70,7 +71,7 @@ class ViewController: UIViewController {
         
     }
     
-    // 進むボタン押下時
+    // 再生ボタン押下時
     @IBAction func play(_ sender: Any) {
         goOnButton.isEnabled = false
         bachButton.isEnabled = false
